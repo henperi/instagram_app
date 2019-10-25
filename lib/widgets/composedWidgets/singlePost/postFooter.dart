@@ -2,17 +2,24 @@ import 'package:flutter/material.dart';
 
 import '../image_avatar.dart';
 
-Widget postFooter() {
+Widget postFooter({
+  String profilePic,
+  int viewsCount,
+  int likesCount,
+  int commentsCount,
+  String postCaption,
+}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10),
     child: Column(
       children: <Widget>[
         Row(
           children: <Widget>[
-            Text('54,000 views', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text('$viewsCount views',
+                style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(width: 10),
             Text(
-              '54,000 Likes',
+              '$likesCount Likes',
               style: TextStyle(fontWeight: FontWeight.bold),
             )
           ],
@@ -21,8 +28,7 @@ Widget postFooter() {
         Row(
           children: <Widget>[
             Flexible(
-              child: Text(
-                  'Will Smith is my buddy, he came to visit my son when he was sick...'),
+              child: Text('$postCaption'),
             ),
           ],
         ),
@@ -30,7 +36,7 @@ Widget postFooter() {
         Row(
           children: <Widget>[
             Text(
-              'View all 12 comments',
+              'View all $commentsCount comments',
               style: TextStyle(fontWeight: FontWeight.w100),
             )
           ],
@@ -41,8 +47,7 @@ Widget postFooter() {
         Row(
           children: <Widget>[
             avatar(
-              imageUrl:
-                  'https://s.hdnux.com/photos/51/23/24/10827008/3/920x920.jpg',
+              imageUrl: profilePic,
               size: 12,
             ),
             SizedBox(width: 10),
