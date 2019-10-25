@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:line_icons/line_icons.dart';
 
 Widget bottomNavBar({activeTabName}) {
   useActiveColor(String tabName){
@@ -13,7 +15,7 @@ Widget bottomNavBar({activeTabName}) {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           IconButton(
-            icon: Icon(Icons.home),
+            icon: Icon(LineIcons.home),
             onPressed: () => null,
             color: useActiveColor('Home'),
           ),
@@ -23,12 +25,12 @@ Widget bottomNavBar({activeTabName}) {
             color: useActiveColor('Search'),
           ),
           IconButton(
-            icon: Icon(Icons.add_box),
+            icon: Icon(FontAwesomeIcons.plusSquare),
             onPressed: () => null,
             color: useActiveColor('Add'),
           ),
           IconButton(
-            icon: Icon(Icons.person_outline),
+            icon: Icon(FontAwesomeIcons.user),
             onPressed: () => null,
             color: useActiveColor('Person'),
           ),

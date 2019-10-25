@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Widget tonNavBar({
   @required Widget title,
@@ -8,7 +9,7 @@ Widget tonNavBar({
   final defaultActions = <Widget>[
     Padding(
       padding: const EdgeInsets.only(right: 15.0),
-      child: Icon(Icons.send),
+      child: Icon(FontAwesomeIcons.paperPlane),
     )
   ];
 
