@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../image_avatar.dart';
 
-Widget postHeader() {
+Widget postHeader({String userName, String imageUrl}) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: <Widget>[
@@ -11,14 +11,13 @@ Widget postHeader() {
         child: Row(
           children: <Widget>[
             avatar(
-              imageUrl:
-                  'https://qph.fs.quoracdn.net/main-qimg-8c5ea2930025b21f9a394cf0a3b95759',
+              imageUrl: imageUrl,
               size: 16.0,
             ),
             Container(
               width: 10.0,
             ),
-            Text('Dwayne Johnson'),
+            Text(userName),
           ],
         ),
       ),
