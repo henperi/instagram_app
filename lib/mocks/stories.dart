@@ -15,7 +15,7 @@ List stories = [
   },
   {
     'userName': 'Kim K',
-    'imageUrl': 'http://lorempixel.com/400/200',
+    'imageUrl': 'https://cdn2.glamour.es/uploads/images/thumbs/es/glam/4/s/2019/39/kim_kardashian_3132_820x820.jpg',
   },
   {
     'userName': 'Deryl',

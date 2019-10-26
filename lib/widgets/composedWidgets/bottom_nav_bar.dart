@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram_app/screens/home_screen.dart';
+import 'package:instagram_app/screens/search_screen.dart';
 import 'package:line_icons/line_icons.dart';
 
-Widget bottomNavBar({activeTabName}) {
+Widget bottomNavBar(context, {activeTabName}) {
   useActiveColor(String tabName){
     return activeTabName == tabName ? Colors.blueAccent : Colors.black;
+  }
+
+  navigateToScreen(routeName) {
+    if (routeName != ModalRoute.of(context).settings.name) {
+      Navigator.pushNamed(context, routeName);
+    }
   }
 
   return Container(
@@ -16,12 +24,12 @@ Widget bottomNavBar({activeTabName}) {
         children: <Widget>[
           IconButton(
             icon: Icon(LineIcons.home),
-            onPressed: () => null,
+            onPressed: () =>  navigateToScreen(HomeScreen.routeName),
             color: useActiveColor('Home'),
           ),
           IconButton(
             icon: Icon(Icons.search),
-            onPressed: () => null,
+            onPressed: () => navigateToScreen(SearchScreen.routeName),
             color: useActiveColor('Search'),
           ),
           IconButton(
