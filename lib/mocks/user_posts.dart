@@ -38,7 +38,7 @@ List userPosts = [
     'commentsCount': 207,
     'userName': 'Kim K',
     'profilePic':
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ28_VvyXqD_mZoK3vmbpYAvW4NnOO4P1y1lA-697a4p4dwlGhQ',
+        'https://cdn2.glamour.es/uploads/images/thumbs/es/glam/4/s/2019/39/kim_kardashian_3132_820x820.jpg',
     'mediaUrl': 'http://lorempixel.com/400/200',
     'postCaption':
         'Will Smith is my buddy, he came to visit my son when he was sick...',

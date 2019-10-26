@@ -5,6 +5,7 @@ Widget tonNavBar({
   @required Widget title,
   Widget leadingActions,
   List<Widget> actions,
+  PreferredSizeWidget bottomBar
 }) {
   final defaultActions = <Widget>[
     Padding(
@@ -16,11 +17,12 @@ Widget tonNavBar({
   return AppBar(
     title: SizedBox(
       height: 35.0,
-      child: title,
+      child: Align(child: title, alignment: Alignment.centerLeft),
     ),
-    centerTitle: true,
+    centerTitle: false,
     elevation: 1.0,
     leading: leadingActions ?? Icon(Icons.camera_alt),
     actions: actions ?? defaultActions,
+    bottom: bottomBar ?? null,
   );
 }
