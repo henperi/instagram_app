@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:instagram_app/screens/home_screen.dart';
 import 'package:instagram_app/screens/search_screen.dart';
+import 'package:instagram_app/screens/upload_screen.dart';
 import 'package:line_icons/line_icons.dart';
 
 Widget bottomNavBar(context, {activeTabName}) {
@@ -34,7 +35,7 @@ Widget bottomNavBar(context, {activeTabName}) {
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.plusSquare),
-            onPressed: () => null,
+            onPressed: () => navigateToScreen(UploadScreen.routeName),
             color: useActiveColor('Add'),
           ),
           IconButton(

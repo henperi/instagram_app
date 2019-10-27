@@ -17,10 +17,11 @@ class _StorySectionState extends State<StorySection> {
   ];
 
   getHeightRatio(orientation) {
+    final defaultHeight = 12.5;
     if (orientation == Orientation.landscape) {
-      return 26;
+      return defaultHeight * 2;
     } else {
-      return 12;
+      return defaultHeight;
     }
   }
 

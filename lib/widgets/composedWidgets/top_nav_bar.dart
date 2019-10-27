@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-Widget tonNavBar({
-  @required Widget title,
-  Widget leadingActions,
-  List<Widget> actions,
-  PreferredSizeWidget bottomBar
-}) {
+Widget tonNavBar(
+    {@required Widget title,
+    Widget leadingActions,
+    List<Widget> actions,
+    PreferredSizeWidget bottomBar}) {
   final defaultActions = <Widget>[
     Padding(
       padding: const EdgeInsets.only(right: 15.0),
@@ -21,7 +20,10 @@ Widget tonNavBar({
     ),
     centerTitle: false,
     elevation: 1.0,
-    leading: leadingActions ?? Icon(Icons.camera_alt),
+    leading: leadingActions ??
+        GestureDetector(
+          child: Icon(Icons.camera_alt),
+        ),
     actions: actions ?? defaultActions,
     bottom: bottomBar ?? null,
   );
