@@ -20,11 +20,9 @@ Widget tonNavBar(
     ),
     centerTitle: false,
     elevation: 1.0,
-    leading: leadingActions ??
-        GestureDetector(
-          child: Icon(Icons.camera_alt),
-        ),
+    leading: leadingActions ?? null,
     actions: actions ?? defaultActions,
     bottom: bottomBar ?? null,
+    automaticallyImplyLeading: false,
   );
 }

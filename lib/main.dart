@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_app/screens/activity_screen.dart';
 import 'package:instagram_app/screens/home_screen.dart';
 import 'package:instagram_app/screens/search_screen.dart';
 import 'package:instagram_app/screens/upload_screen.dart';
@@ -13,12 +14,12 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Instagram Clone',
         theme: lightTheme(),
-        initialRoute: '/',
+        home: HomeScreen(),
         routes: {
           HomeScreen.routeName: (context) => HomeScreen(),
           SearchScreen.routeName: (context) => SearchScreen(),
           UploadScreen.routeName: (context) => UploadScreen(),
-          // ImageCaptureScreen.routeName: (context) => ImageCaptureScreen(),
+          ActivityScreen.routeName: (context) => ActivityScreen(),
         },
       ),
     );
