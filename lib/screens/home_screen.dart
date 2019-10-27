@@ -9,7 +9,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: tonNavBar(title: Text('Instagram Clone App')),
+      appBar: tonNavBar(title: Text('Instagram Clone App'), leadingActions: GestureDetector(
+          child: Icon(
+            Icons.camera_alt,
+          ),
+        )),
       body: HomeBody(),
       bottomNavigationBar: bottomNavBar(context),
     );

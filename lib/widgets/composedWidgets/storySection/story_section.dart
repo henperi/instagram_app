@@ -39,7 +39,6 @@ class _StorySectionState extends State<StorySection> {
       height: height,
       color: Colors.blue[50],
       alignment: Alignment.center,
-      padding: const EdgeInsets.only(left: 1.0),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
@@ -50,17 +49,15 @@ class _StorySectionState extends State<StorySection> {
 
           return Stack(
             children: <Widget>[
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: story(
-                    imageUrl: _stories[index]['imageUrl'],
-                    userName: _stories[index]['userName'],
-                  ),
+              Padding(
+                padding:  EdgeInsets.fromLTRB(8.0, 6.0, 8, 0),
+                child: story(
+                  imageUrl: _stories[index]['imageUrl'],
+                  userName: _stories[index]['userName'],
                 ),
               ),
               Positioned(
-                  bottom: 25,
+                  bottom: 15,
                   right: 0,
                   child: index == 0
                       ? CircleAvatar(

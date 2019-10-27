@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:instagram_app/screens/activity_screen.dart';
 import 'package:instagram_app/screens/home_screen.dart';
 import 'package:instagram_app/screens/search_screen.dart';
 import 'package:instagram_app/screens/upload_screen.dart';
@@ -37,6 +38,11 @@ Widget bottomNavBar(context, {activeTabName}) {
             icon: Icon(FontAwesomeIcons.plusSquare),
             onPressed: () => navigateToScreen(UploadScreen.routeName),
             color: useActiveColor('Add'),
+          ),
+          IconButton(
+            icon: Icon(FontAwesomeIcons.heart),
+            onPressed: () => navigateToScreen(ActivityScreen.routeName),
+            color: useActiveColor('Activity'),
           ),
           IconButton(
             icon: Icon(FontAwesomeIcons.user),
