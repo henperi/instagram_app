@@ -7,6 +7,7 @@ class ActivityScreen extends StatelessWidget {
   static final routeName = '/activity';
 
   _getActivities() => ListView.builder(
+        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         itemCount: 26,
         itemBuilder: (context, index) {
           if (index == 0) {
@@ -45,10 +46,7 @@ class ActivityScreen extends StatelessWidget {
     return Scaffold(
       appBar: tonNavBar(
           title: Text('Activity'), actions: <Widget>[], leadingActions: null),
-      body: Padding(
-        padding: const EdgeInsets.all(14.0),
-        child: _getActivities(),
-      ),
+      body: _getActivities(),
       bottomNavigationBar: bottomNavBar(context),
     );
   }
